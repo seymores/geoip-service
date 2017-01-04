@@ -19,7 +19,7 @@ defmodule Geoip.Mixfile do
   def application do
     [mod: {Geoip, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :geolix]]
   end
 
   # Specifies which paths to compile per environment.
@@ -33,11 +33,11 @@ defmodule Geoip.Mixfile do
     [{:phoenix, "~> 1.2.0-rc"},
      {:phoenix_pubsub, "~> 1.0.0-rc"},
      {:phoenix_ecto, "~> 3.0-rc"},
-     {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.5"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+    { :geolix, "~> 0.11" } ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
