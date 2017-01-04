@@ -3,7 +3,7 @@ defmodule Geoip.Mixfile do
 
   def project do
     [app: :geoip,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
@@ -18,8 +18,8 @@ defmodule Geoip.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Geoip, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :geolix]]
+     applications: [:geolix, :phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :phoenix_ecto]    
+    ]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,7 +37,8 @@ defmodule Geoip.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-    { :geolix, "~> 0.11" } ]
+     { :geolix, "~> 0.11" },
+     {:distillery, "~> 1.0"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

@@ -12,6 +12,7 @@ defmodule Geoip do
       supervisor(Geoip.Endpoint, []),
       # Start your own worker by calling: Geoip.Worker.start_link(arg1, arg2, arg3)
       # worker(Geoip.Worker, [arg1, arg2, arg3]),
+      # supervise(Geolix.Supervisor, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
